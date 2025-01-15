@@ -1,0 +1,17 @@
+{
+    "introductionParagraph1": "abc",
+    "introductionParagraph2": "abc",
+    "campaign": {
+        "title": "Campaign",
+        "paragraph1": "abc"
+    },
+    "endgame": {
+        "title": "Endgame",
+        "paragraph1": "abc"
+    },
+    "crafting": {
+        "title": "Crafting",
+        "paragraph1": "abc"
+    },
+    "closingParagraph": "abc"
+}
