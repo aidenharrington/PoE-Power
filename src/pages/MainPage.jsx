@@ -4,6 +4,8 @@ import commonContent from "../content/CommonContent.json"
 
 const IntroductionTab = lazy(() => import('./tabs/introductionTab/IntroductionTab'));
 const CampaignTab = lazy(() => import('./tabs/campaignTab/CampaignTab'));
+const EndgameTab = lazy(() => import('./tabs/endgameTab/EndgameTab'));
+const CraftingTab = lazy(() => import('./tabs/craftingTab/CraftingTab'))
 
 
 const MainPage = () => {
@@ -24,6 +26,18 @@ const MainPage = () => {
                         <CampaignTab />
                     </Suspense>
                 )
+            case content.tabTitles.endgame:
+                return (
+                    <Suspense fallback={<div>{commonContent.loadingMessage}</div>}>
+                        <EndgameTab />
+                    </Suspense>
+                )
+            case content.tabTitles.crafting:
+                return (
+                    <Suspense fallback={<div>{commonContent.loadingMessage}</div>}>
+                        <CraftingTab />
+                    </Suspense>
+                )
         }
     }
 
@@ -39,6 +53,16 @@ const MainPage = () => {
                     setActiveTab(content.tabTitles.campaign)
                 }}>
                     {content.tabTitles.campaign}
+                </button>
+                <button onClick={() => {
+                    setActiveTab(content.tabTitles.endgame);
+                }}>
+                    {content.tabTitles.endgame}
+                </button>
+                <button onClick={() => {
+                    setActiveTab(content.tabTitles.crafting)
+                }}>
+                    {content.tabTitles.crafting}
                 </button>
             </nav>
             <div>
