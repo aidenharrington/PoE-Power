@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import content from "../../../content/introductionTab/IntroductionContent.json"
+import content from "../../../content/campaignTab/Act3Content.json"
 
-const IntroductionTab = () => {
+const Act3Tab = () => {
     return (
         <Box>
             <Typography>
@@ -12,4 +12,4 @@ const IntroductionTab = () => {
     );   
 }
 
-export default IntroductionTab;
+export default Act3Tab;
